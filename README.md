@@ -123,9 +123,20 @@ Ajouter un boutton Test vers le Controller
 
 
 
-
-
-
+## Envoide paramètres au fonction du Controller
+##### créer une nouvelle fonction dans Controllers/TestController.cs
+	public IActionResult FuncTest(int id = 0, string name = "pas de nom")
+	{
+		ViewBag.id = id;
+		ViewBag.name = name;
+		return View();
+	}
+#### créer une nouvelle Views dans Views/Test qui porte le même nom que la fonction. (Views/Test/FuncTest.cshtml)
+	<h1>FuncTest</h1>
+	<h3>@ViewBag.id</h3>
+	<h3>@ViewBag.name</h3>
+##### tester l'url suivant:
+	https://localhost:5001/Test/FuncTest?id=3&name="ceci est un  nom"
 
 
 
