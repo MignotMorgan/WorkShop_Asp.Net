@@ -26,104 +26,100 @@ https://docs.microsoft.com/fr-fr/aspnet/core/tutorials/first-mvc-app-xplat/start
 
 
 ## se connecter au site (Your connection is not secure)
-
-cliquer sur Advanced
-cliquer sur Add Exception...
-décocher la case Permanently store this exception
-cliquer sur Confirm Security Exception
+	1 cliquer sur Advanced
+	2 cliquer sur Add Exception...
+	3 décocher la case Permanently store this exception
+	4 cliquer sur Confirm Security Exception
 
 
 ## Explorer le fichier _Layout.cshtml
-#### fichier page maître du site.
+#### page maître du site.
 
 Ajouter un boutton Test vers le Controller
-// ligne 36 
-<li><a asp-area="" asp-controller="Test" asp-action="Index">Test</a></li>
+
+	// ligne 36 
+	<li><a asp-area="" asp-controller="Test" asp-action="Index">Test</a></li>
 
 
 
 
 ## créer un Controller
 #### créer un fichier TestControllers.cs dans le dossier Controllers/
+	using System;
+	using System.Collections.Generic;
+	using System.Diagnostics;
+	using System.Linq;
+	using System.Threading.Tasks;
+	using Microsoft.AspNetCore.Mvc;
+	using MvcMovie.Models;
 
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using MvcMovie.Models;
-
-namespace MvcMovie.Controllers
-{
-public class TestController : Controller
-{
-    public IActionResult Index()
-    {
-    	ViewData["montest"] = "mon test";
-	return View();
-    }
-}
-}
+	namespace MvcMovie.Controllers
+	{
+		public class TestController : Controller
+		{
+			public IActionResult Index()
+			{
+				ViewData["montest"] = "mon test";
+				return View();
+			}
+		}
+	}
 
 
 ## créer une View
 #### créer un fichier Index.cshtml dans le dossier Views/Test/
-
-<h1>TEST</h1>
-<h2>@ViewData["montest"]</h2>
+	<h1>TEST</h1>
+	<h2>@ViewData["montest"]</h2>
 
 
 ## Créer un Model
 #### créer un fichier MonTest.cs dans le dossier Models/
 
-using System;
+	using System;
 
-namespace MvcMovie.Models
-{
-    public class MonTest
-    {
-        public string Name { get; set; }
+	namespace MvcMovie.Models
+	{
+		public class MonTest
+		{
+			public string Name { get; set; }
 
-        public MonTest(string name = "monnom")
-        {
-            Name = name;
-        }
-    }
-}
+			public MonTest(string name = "monnom")
+			{
+				Name = name;
+			}
+		}
+	}
 
 #### remplacer dans le fichier Controllers/TestController.cs
+	using System;
+	using System.Collections.Generic;
+	using System.Diagnostics;
+	using System.Linq;
+	using System.Threading.Tasks;
+	using Microsoft.AspNetCore.Mvc;
+	using MvcMovie.Models;
 
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using MvcMovie.Models;
-
-namespace MvcMovie.Controllers
-{
-    public class TestController : Controller
-    {
-        public IActionResult Index()
-        {
-            ViewData["montest"] = "mon test";
-            MonTest montest = new MonTest("classe MonTest"); 
-            return View(montest);
-        }
-    }
-}
+	namespace MvcMovie.Controllers
+	{
+		public class TestController : Controller
+		{
+			public IActionResult Index()
+			{
+				ViewData["montest"] = "mon test";
+				MonTest montest = new MonTest("classe MonTest"); 
+				return View(montest);
+			}
+		}
+	}
 
 #### remplacer dans le fichier Views/Test/Index/cshtml
+	@model MvcMovie.Models.MonTest
 
-@model MvcMovie.Models.MonTest
+	@using MvcMovie.Models;
 
-@using MvcMovie.Models;
-
-<h1>TEST</h1>
-<h2>@ViewData["montest"]</h2>
-<h2>@Model.Name</h2>
+	<h1>TEST</h1>
+	<h2>@ViewData["montest"]</h2>
+	<h2>@Model.Name</h2>
 
 
 
