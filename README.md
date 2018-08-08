@@ -33,7 +33,7 @@ https://docs.microsoft.com/fr-fr/aspnet/core/tutorials/first-mvc-app-xplat/start
 
 
 ## Explorer le fichier _Layout.cshtml
-#### page maître du site.
+#### page maître du site: Views/Shared/_Layout.cshtml
 
 Ajouter un boutton Test vers le Controller
 
