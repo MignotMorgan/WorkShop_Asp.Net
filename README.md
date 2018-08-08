@@ -13,19 +13,19 @@ https://docs.microsoft.com/fr-fr/aspnet/core/tutorials/first-mvc-app-xplat/start
 	sudo apt-get install dotnet-sdk-2.1
 
 
-## créer un site asp.NET MVC
+## Créer un site asp.NET MVC
 	mkdir MvcMovie
 	cd MvcMovie
 	dotnet new mvc
 
 
-## lancer le site
+## Lancer le site
 	F5 dans Visual Code
 	ou
 	dotnet run
 
 
-## se connecter au site (Your connection is not secure)
+## Se connecter au site (Your connection is not secure)
 	1 cliquer sur Advanced
 	2 cliquer sur Add Exception...
 	3 décocher la case Permanently store this exception
@@ -43,7 +43,7 @@ Ajouter un boutton Test vers le Controller
 
 
 
-## créer un Controller
+## Créer un Controller
 #### créer un fichier TestControllers.cs dans le dossier Controllers/
 	using System;
 	using System.Collections.Generic;
@@ -66,7 +66,7 @@ Ajouter un boutton Test vers le Controller
 	}
 
 
-## créer une View
+## Créer une View
 #### créer un fichier Index.cshtml dans le dossier Views/Test/
 	<h1>TEST</h1>
 	<h2>@ViewData["montest"]</h2>
@@ -123,7 +123,7 @@ Ajouter un boutton Test vers le Controller
 
 
 
-## Envoide paramètres au fonction du Controller
+## Envoyez des paramètres au fonction du Controller
 ##### créer une nouvelle fonction dans Controllers/TestController.cs
 	public IActionResult FuncTest(int id = 0, string name = "pas de nom")
 	{
