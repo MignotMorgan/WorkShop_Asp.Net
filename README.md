@@ -143,4 +143,18 @@ ou
 	https://localhost:5001/Test/FuncTest/15/
 
 
+## Mais encore ...
+##### vous pouvez remplacer return View() par:
+
+	//return RedirectToAction("function"); 
+	//return RedirectToLocal(returnUrl);
+
+#### chaque utilisateur possède sa propre session. Une liste de clé-valeur qui lui son propre.
+
+	Session["key"] = "value";
+
+#### chaque site web asp.net possède sa propre liste de clé-valeur.
+
+	Application["key"] = "value";
+
 
