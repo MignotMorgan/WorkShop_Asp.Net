@@ -1,11 +1,10 @@
-# WorkShop_Asp.Net
-
+# NET.Core Aps.Net MVC
 
 https://docs.microsoft.com/fr-fr/aspnet/core/tutorials/first-mvc-app-xplat/start-mvc?view=aspnetcore-2.1
 
-** Installer .NET Core
-**** https://www.microsoft.com/net/download/dotnet-core/2.1
-* (ubuntu16-04) : https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.302
+## Installer .NET Core
+#### https://www.microsoft.com/net/download/dotnet-core/2.1
+# (ubuntu16-04) : https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.302
 
 wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
@@ -15,20 +14,20 @@ sudo apt-get update
 sudo apt-get install dotnet-sdk-2.1
 
 
-** créer un site asp.NET MVC
+## créer un site asp.NET MVC
 
 mkdir MvcMovie
 cd MvcMovie
 dotnet new mvc
 
 
-** lancer le site
+## lancer le site
 F5 dans Visual Code
 ou
 dotnet run
 
 
-** se connecter au site (Your connection is not secure)
+## se connecter au site (Your connection is not secure)
 
 cliquer sur Advanced
 cliquer sur Add Exception...
@@ -36,8 +35,8 @@ décocher la case Permanently store this exception
 cliquer sur Confirm Security Exception
 
 
-** Explorer le fichier _Layout.cshtml
-**** fichier page maître du site.
+## Explorer le fichier _Layout.cshtml
+#### fichier page maître du site.
 
 Ajouter un boutton Test vers le Controller
 // ligne 36 
@@ -46,8 +45,8 @@ Ajouter un boutton Test vers le Controller
 
 
 
-** créer un Controller
-**** créer un fichier TestControllers.cs dans le dossier Controllers/
+## créer un Controller
+#### créer un fichier TestControllers.cs dans le dossier Controllers/
 
 using System;
 using System.Collections.Generic;
@@ -70,15 +69,15 @@ public class TestController : Controller
 }
 
 
-** créer une View
-**** créer un fichier Index.cshtml dans le dossier Views/Test/
+## créer une View
+#### créer un fichier Index.cshtml dans le dossier Views/Test/
 
 <h1>TEST</h1>
 <h2>@ViewData["montest"]</h2>
 
 
-** Créer un Model
-**** créer un fichier MonTest.cs dans le dossier Models/
+## Créer un Model
+#### créer un fichier MonTest.cs dans le dossier Models/
 
 using System;
 
@@ -95,7 +94,7 @@ namespace MvcMovie.Models
     }
 }
 
-**** remplacer dans le fichier Controllers/TestController.cs
+#### remplacer dans le fichier Controllers/TestController.cs
 
 using System;
 using System.Collections.Generic;
@@ -118,7 +117,7 @@ namespace MvcMovie.Controllers
     }
 }
 
-**** remplacer dans le fichier Views/Test/Index/cshtml
+#### remplacer dans le fichier Views/Test/Index/cshtml
 
 @model MvcMovie.Models.MonTest
 
