@@ -136,7 +136,7 @@ Ajouter un boutton Test vers le Controller
 	<h3>@ViewBag.id</h3>
 	<h3>@ViewBag.name</h3>
 ##### tester l'url suivant:
-(https://localhost:5001/Test/FuncTest?id=3&name="ceci est un  nom")[https://localhost:5001/Test/FuncTest?id=3&name="ceci est un  nom"]
+[https://localhost:5001/Test/FuncTest?id=3&name="ceci est un  nom"](https://localhost:5001/Test/FuncTest?id=3&name="ceci est un  nom")
 
 
 
