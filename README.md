@@ -4,27 +4,25 @@ https://docs.microsoft.com/fr-fr/aspnet/core/tutorials/first-mvc-app-xplat/start
 
 ## Installer .NET Core
 #### https://www.microsoft.com/net/download/dotnet-core/2.1
-# (ubuntu16-04) : https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.302
+#### (ubuntu16-04) : https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.302
+	wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
+	sudo dpkg -i packages-microsoft-prod.deb
 
-wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install dotnet-sdk-2.1
+	sudo apt-get install apt-transport-https
+	sudo apt-get update
+	sudo apt-get install dotnet-sdk-2.1
 
 
 ## créer un site asp.NET MVC
-
-mkdir MvcMovie
-cd MvcMovie
-dotnet new mvc
+	mkdir MvcMovie
+	cd MvcMovie
+	dotnet new mvc
 
 
 ## lancer le site
-F5 dans Visual Code
-ou
-dotnet run
+	F5 dans Visual Code
+	ou
+	dotnet run
 
 
 ## se connecter au site (Your connection is not secure)
